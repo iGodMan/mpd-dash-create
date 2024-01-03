@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    video {
+        width: 640px;
+        height: 360px;
+    }
+</style>
+<body>
+    <div>
+        <video id="videoPlayer" controls></video>
+    </div>
+    <script src="https://cdn.dashjs.org/v3.1.0/dash.all.min.js"></script>
+    <script src="http://cdn.dashjs.org/v3.1.0/dash.all.debug.js"></script>
+    <script>
+        (function () {
+            var url = "video/output.mpd";
+            var player = dashjs.MediaPlayer().create();
+            player.initialize(document.querySelector("#videoPlayer"), url, true);
+        })();
+    </script>
+
+</body>
+</html>

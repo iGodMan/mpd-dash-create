@@ -1,0 +1,1 @@
+ffmpeg -i tom.mp4 -c:v libx264 -b:v 1500k -c:a aac -b:a 128k -f dash output.mpd
